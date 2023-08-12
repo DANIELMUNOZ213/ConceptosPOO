@@ -15,7 +15,7 @@ class Rectangulo:
         area = self.base * self.altura
         return area
     
-    def cuadrado(self)
+    def cuadrado(self):
         if self.altura == self.base:
             return ("El rectangulo es cuadrado")
         
