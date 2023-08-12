@@ -1,19 +1,23 @@
 class Rectangulo:
-    def __init__(self, punto1, punto2):
-        self.esquina1 = punto1
-        self.esquina2 = punto2
+    def __init__(self):
+        self.esquina_x1 = 1
+        self.esquina_x2 = 2
+        self.esquina_y1 = 1
+        self.esquina_y2 = 2
 
-    def calcular_perímetro(self):
-        base = abs(self.esquina2.x - self.esquina1.x)
-        altura = abs(self.esquina2.y - self.esquina1.y)
-        return 2 * (base + altura)
-
-    def calcular_área(self):
-        base = abs(self.esquina2.x - self.esquina1.x)
-        altura = abs(self.esquina2.y - self.esquina1.y)
-        return base * altura
-
-    def es_cuadrado(self):
-        base = abs(self.esquina2.x - self.esquina1.x)
-        altura = abs(self.esquina2.y - self.esquina1.y)
-        return base == altura
+    def calcular_perimetro(self):
+        self.altura = self.esquina_y1 - self.esquina_y2
+        self.base = self.esquina_x1 - self.esquina_x2
+        perimetro = ((self.altura*2) + (self.base*2))
+        return perimetro
+    
+    def calcular_area(self):
+        area = self.base * self.altura
+        return area
+    
+    def cuadrado(self)
+        if self.altura == self.base:
+            return ("El rectangulo es cuadrado")
+        
+        else:
+            return ("No es cuadrado")
